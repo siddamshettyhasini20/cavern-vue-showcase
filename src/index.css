@@ -1,42 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Cave Restaurant Design System - Rich earth tones and elegant lighting */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Cave Restaurant Color Palette */
+    --background: 25 15% 8%;
+    --foreground: 30 8% 92%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 20 12% 12%;
+    --card-foreground: 30 8% 92%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 20 12% 12%;
+    --popover-foreground: 30 8% 92%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Rich earth primary - warm gold */
+    --primary: 35 85% 55%;
+    --primary-foreground: 25 15% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Stone secondary */
+    --secondary: 20 8% 25%;
+    --secondary-foreground: 30 8% 92%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted cave tones */
+    --muted: 20 10% 18%;
+    --muted-foreground: 30 5% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Warm accent */
+    --accent: 25 45% 35%;
+    --accent-foreground: 30 8% 92%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 30 8% 92%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 20 8% 22%;
+    --input: 20 8% 22%;
+    --ring: 35 85% 55%;
 
-    --radius: 0.5rem;
+    /* Cave Restaurant Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(25 15% 8%), hsl(20 20% 15%), hsl(25 25% 12%));
+    --gradient-warm: linear-gradient(180deg, hsl(35 85% 55% / 0.1), hsl(25 45% 35% / 0.05));
+    --gradient-cave: radial-gradient(ellipse at center, hsl(25 25% 15%), hsl(20 15% 10%));
+    --gradient-gold: linear-gradient(135deg, hsl(35 85% 55%), hsl(40 75% 60%));
+    
+    /* Lighting Effects */
+    --glow-warm: 0 0 40px hsl(35 85% 55% / 0.3);
+    --glow-subtle: 0 0 20px hsl(35 85% 55% / 0.15);
+    --shadow-deep: 0 20px 40px hsl(0 0% 0% / 0.4);
+    --shadow-elegant: 0 10px 30px hsl(0 0% 0% / 0.2);
+
+    /* Smooth Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +120,61 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+
+  .gradient-cave {
+    background: var(--gradient-cave);
+  }
+
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .glow-warm {
+    box-shadow: var(--glow-warm);
+  }
+
+  .glow-subtle {
+    box-shadow: var(--glow-subtle);
+  }
+
+  .shadow-deep {
+    box-shadow: var(--shadow-deep);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
   }
 }
