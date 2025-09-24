@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/7ad74355-354b-4e57-9c87-55d0e7e4e9d9
+**URL**: https://cavern-vue-showcase.lovable.app/
 
 ## How can I edit this code?
 
